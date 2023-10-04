@@ -1,0 +1,11 @@
+<%= form_for @voice, url: voices_path, html: { multipart: true } do |f| %>
+  <div class="field">
+    <%= f.label :script %>
+    <%= f.text_area :script %>
+  </div>
+  <div class="field">
+    <%= f.label :audio %>
+    <%= f.file_field :audio %>
+  </div>
+  <%= f.submit 'アップロード' %>
+<% end %>
